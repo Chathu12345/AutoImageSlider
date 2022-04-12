@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.makeramen.roundedimageview.RoundedImageView;
 
@@ -14,6 +15,12 @@ import java.util.List;
 public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderViewHolder> {
 
     private List<SliderItem> sliderItems;
+    private ViewPager2 viewPager2;
+
+    public SliderAdapter(List<SliderItem> sliderItems, ViewPager2 viewPager2) {
+        this.sliderItems = sliderItems;
+        this.viewPager2 = viewPager2;
+    }
 
     @NonNull
     @Override
@@ -30,7 +37,7 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return sliderItems.size();
     }
 
     class SliderViewHolder extends RecyclerView.ViewHolder {
