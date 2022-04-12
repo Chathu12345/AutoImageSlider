@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         List<SliderItem> sliderItems = new ArrayList<>();
         sliderItems.add(new SliderItem(R.drawable.image1));
         sliderItems.add(new SliderItem(R.drawable.image3));
-        sliderItems.add(new SliderItem(R.drawable.image4));
-        sliderItems.add(new SliderItem(R.drawable.image5));
         sliderItems.add(new SliderItem(R.drawable.image6));
+        sliderItems.add(new SliderItem(R.drawable.image5));
+        sliderItems.add(new SliderItem(R.drawable.image4));
 
         viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
 
