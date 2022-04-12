@@ -1,5 +1,6 @@
 package com.chathu.autoimageslider;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -8,12 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.makeramen.roundedimageview.RoundedImageView;
 
-public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderViewHolder>{
+import java.util.List;
+
+public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderViewHolder> {
+
+    private List<SliderItem> sliderItems;
 
     @NonNull
     @Override
     public SliderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        return new SliderViewHolder(
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.slide_item_container, parent, false)
+        );
     }
 
     @Override
